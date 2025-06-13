@@ -185,7 +185,6 @@ header .nav-contact{
     font-size: 0.9rem;
 }
 
-
 .marquee-grid-box marquee span{
     opacity: 0.5;
 }
@@ -249,7 +248,7 @@ header .nav-contact{
 
 /* Experiences */
 .experiences-grid {
-    grid-column: 2/4;
+    grid-column: 3/4;
 }
 
 .experiences-icon {
