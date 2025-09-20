@@ -538,6 +538,15 @@ footer span{
     margin: 0px 20px;
 }
 
+.experiences-box h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.experiences-box h2 a:hover {
+  color: var(--main-color); /* ou bien black si tu veux qu'il reste noir même au survol */
+}
+
 .experiences-container h1 span,
 .project-container h1 span{
     color: var(--main-color);
@@ -570,6 +579,7 @@ footer span{
     margin-top: 5px;
     opacity: 0.9;
 }
+
 /* Project page */
 .project-box-container {
     display: grid;

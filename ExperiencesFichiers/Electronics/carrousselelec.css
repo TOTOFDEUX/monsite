@@ -1,0 +1,75 @@
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #111;
+}
+
+/* cache les radios */
+.carousel input { display: none; }
+
+/* slides en ligne */
+.carousel .slides {
+  display: flex;
+  width: 400%;
+  transition: transform 0.6s ease;
+}
+
+.carousel .slide {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111; /* noir derrière chaque image */
+}
+
+.carousel .slide img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* boutons en bas */
+.carousel .nav-buttons {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel .nav-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;       /* cercle par défaut */
+  background: white;        /* intérieur blanc */
+  border: 3px solid black;  /* contour noir */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* effet au survol */
+.carousel .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+/* bouton actif → losange */
+#s1:checked ~ .nav-buttons label[for="s1"],
+#s2:checked ~ .nav-buttons label[for="s2"],
+#s3:checked ~ .nav-buttons label[for="s3"],
+#s4:checked ~ .nav-buttons label[for="s4"] {
+  border-radius: 0;             /* carré */
+  transform: rotate(45deg);     /* rotation = losange */
+  background: white;            /* fond blanc */
+  border: 3px solid red;      /* contour noir */
+}
+
+/* logique de slide */
+#s1:checked ~ .slides { transform: translateX(0); }
+#s2:checked ~ .slides { transform: translateX(-25%); }
+#s3:checked ~ .slides { transform: translateX(-50%); }
+#s4:checked ~ .slides { transform: translateX(-75%); }
