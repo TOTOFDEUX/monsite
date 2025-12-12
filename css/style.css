@@ -253,6 +253,15 @@ header .nav-contact{
 }
 
 
+.edu-box a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.edu-box a:hover {
+    color: var(--main-color);
+}
+
 
 /* Experiences */
 .experiences-grid {
@@ -544,16 +553,62 @@ footer span{
 }
 
 .experiences-box h2 a:hover {
-  color: var(--main-color); /* ou bien black si tu veux qu'il reste noir même au survol */
+  color: var(--main-color); 
 }
 
 .experiences-container h1 span,
 .project-container h1 span{
     color: var(--main-color);
 }
+
+.experience-summary {
+    margin: 30px auto;      
+    padding: 22px 40px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    width: fit-content;     
+    text-align: center;     
+}
+
+.experience-summary ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 35px;
+    justify-content: center; 
+}
+
+
+.experience-summary a {
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #333;
+
+    display: flex;               /* <== NOUVEAU */
+    align-items: center;         /* centre verticalement */
+    gap: 0px;                   /* espace icône / texte */
+}
+
+
+.section-title {
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Style des icônes du sommaire */
+.toc-icon {
+    width: 60px;        /* taille de l’icône */
+    height: 60px;
+    margin-right: 8px;  /* espace entre icône et texte */
+    vertical-align: middle;
+}
+
+
 .experiences-box-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;;
 }
 .experiences-box{
