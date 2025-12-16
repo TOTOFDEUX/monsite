@@ -838,7 +838,7 @@ footer span{
     header nav .menu li a{
         margin: 0px;
         padding: 20px;
-        border-top: 1px solid var (--border-color);
+        border-top: 1px solid var(--border-color);
         width: 100%;
         display: flex;
     }
@@ -1003,4 +1003,97 @@ footer span{
     .contact-heading{
         font-size: 1.8rem;
     }
+}
+
+/* Modification GPT */
+
+@media (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-grid,
+  .about-project-container,
+  .project-count-grid,
+  .edu-work-container,
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-grid-box,
+  .contact-grid,
+  .about-main-grid .contact-grid {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1, h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .experience-summary ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .toc-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .experience-summary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .experience-summary ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .experience-summary a {
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  .toc-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  marquee {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .main-grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+
+  .main-grid > * {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
